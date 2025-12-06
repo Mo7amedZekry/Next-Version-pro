@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+   
     <title>وايت مياه الرياض صالحة للشرب | توصيل 24 ساعة لكل الأحياء | مؤسسة البركة</title>
-    
+   
     <meta name="description" content="أسرع وايت مياه في الرياض (6 و 18 طن ). مياه شرب نقية للمنازل والمطاعم والمشاريع. اطلب الآن، متواجدون 24 ساعة لجميع أحياء الرياض.">
-    
+   
     <meta name="keywords" content="وايت مياه الرياض, مياه شرب صالحة, توصيل مياه, وايت مياه 24 ساعة, مؤسسة البركة, وايت 18 طن الرياض, وايت مياه شمال الرياض">
-    
+   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17643998486"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17643998486');
+    </script>
+   
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -39,7 +48,7 @@
     <style>
         /* 1. استيراد الخط */
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap');
-        
+       
         /* 2. التنسيقات الأساسية */
         body {
             font-family: 'Tajawal', sans-serif;
@@ -50,97 +59,8 @@
             line-height: 1.9;
             font-size: 18px;
             overflow-x: hidden;
-            text-align: right;
-            /* تم زيادة الـ padding ليتناسب مع زيادة ارتفاع الناف بار */
-            padding-top: 80px; 
+            padding-top: 60px; /* **تعديل: إضافة مسافة علوية لشريط التنقل الثابت** */
         }
-
-        /* --- تنسيق الناف بار الجديد (Navbar) - احترافي ومحدث --- */
-        .sticky-navbar {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            /* تم زيادة الطول قليلاً */
-            height: 70px; 
-            background-color: #0056b3; 
-            /* ظل احترافي ناعم */
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15); 
-            display: flex;
-            align-items: center;
-            justify-content: space-between; 
-            padding: 0 20px; /* زيادة الهامش الأفقي */
-            z-index: 998;
-        }
-
-        .navbar-right {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-shrink: 0; 
-        }
-
-        .navbar-brand {
-            font-size: 1.3rem; /* تكبير الخط قليلاً */
-            font-weight: 800;
-            color: #ffffff; 
-            text-decoration: none;
-            white-space: nowrap;
-            transition: color 0.3s;
-        }
-        .navbar-brand:hover {
-             color: #ffd700;
-        }
-
-        .navbar-links {
-            display: flex;
-            /* زيادة المسافة بين الروابط */
-            gap: 30px; 
-            flex-grow: 1; 
-            justify-content: center; /* توسيط العناصر داخل الحاوية */
-        }
-
-        .navbar-links a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 17px; /* تكبير الخط قليلاً */
-            /* إضافة مساحة حول النص لتبدو الروابط أنظف */
-            padding: 5px 0; 
-            position: relative; /* ضروري لتأثير الخط السفلي */
-            transition: color 0.3s;
-        }
-
-        /* إضافة خط سفلي ناعم عند التمرير */
-        .navbar-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: -8px; /* نزول الخط تحت النص */
-            right: 0; /* يبدأ الخط من اليمين (في اللغة العربية) */
-            background-color: #ffd700; /* اللون الذهبي */
-            transition: width 0.3s ease-out;
-            border-radius: 2px;
-        }
-
-        .navbar-links a:hover {
-            color: #ffd700; 
-        }
-
-        /* تفعيل الخط السفلي عند التمرير */
-        .navbar-links a:hover::after {
-            width: 100%;
-        }
-        /* -------------------------------------- */
-
-        /* إخفاء الروابط في الشاشات الصغيرة جداً */
-        @media (max-width: 400px) {
-            .navbar-links {
-                display: none; 
-            }
-        }
-        /* -------------------------------------- */
 
         /* 3. العناوين */
         .section h2 {
@@ -156,13 +76,8 @@
             color: #ffffff;
             margin-bottom: 10px;
         }
-        #areas h3, #prices h3 {
-            color: #0056b3; 
-            margin-bottom: 15px; 
-            font-size: 1.5em;
-        }
 
-        /* 4. أزرار التواصل */
+        /* 4. أزرار التواصل في الأقسام */
         .contact-buttons-container {
             text-align: center;
             margin-top: 20px;
@@ -177,15 +92,36 @@
             flex-direction: column;
             gap: 10px;
         }
-        .order-now.whatsapp-btn {
-            background-color: #25d366;
-            color: white !important;
+
+        /* **NEW: شريط التنقل العلوي الثابت (Main Navbar)** */
+        .main-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: #0056b3; /* اللون الأزرق */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            height: 40px;
         }
-        .order-now.whatsapp-btn:hover {
-            background-color: #128c7e !important;
+        .navbar-logo {
+            max-height: 40px; /* حجم الشعار الصغير */
+            width: auto;
+            margin-left: 10px;
+        }
+        .navbar-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            flex-grow: 1; /* للسماح للعنوان بأخذ مساحة أكبر */
         }
 
-        /* 5. القائمة الجانبية (Sidebar) - تم التعديل */
+
+        /* 5. القائمة الجانبية (Sidebar) */
         .sidebar {
             width: 250px;
             background-color: #0056b3;
@@ -197,8 +133,7 @@
             transition: right 0.3s ease, box-shadow 0.3s ease;
             padding-top: 20px;
             z-index: 1000;
-            /* --- تم التعديل: السماح بالسكرول إذا كانت القائمة طويلة --- */
-            overflow-y: auto; 
+            overflow-y: auto; /* **تعديل: جعل القائمة الجانبية قابلة للتمرير** */
         }
         .sidebar.active { right: 0; box-shadow: -5px 0 15px rgba(0,0,0,0.3); }
         .sidebar ul { list-style: none; padding: 0; margin: 0; }
@@ -222,13 +157,14 @@
         .sidebar-header h2 { font-size: 20px; font-weight: 700; margin: 0; line-height: 1.4; }
         .sidebar-header p { font-size: 14px; margin: 5px 0 0; color: #ffffff; }
 
+        /* تنسيق الشعار في القائمة الجانبية */
         .sidebar-logo {
-            max-width: 150px;
+            max-width: 150px; /* حجم معقول للشعار في القائمة الجانبية */
             height: auto;
             margin-bottom: 15px;
         }
 
-        /* 6. زر الإغلاق وزر القائمة */
+        /* 6. زر الإغلاق (X) و زر القائمة (☰) */
         .close-sidebar {
             position: absolute;
             top: 10px;
@@ -241,30 +177,18 @@
             transition: color 0.2s;
         }
         .close-sidebar:hover { color: white; }
-        
-        /* تعديل زر القائمة (3 شرطات) ليتناسب مع الخلفية الزرقاء */
         .menu-toggle {
-            font-size: 24px;
+            font-size: 20px;
             cursor: pointer;
-            /* تم تغيير اللون للأبيض */
-            color: #ffffff; 
-            z-index: 999;
-            background-color: transparent;
-            padding: 5px;
+            color: white; /* **تعديل: لون الشرطات داخل شريط التنقل** */
+            background-color: transparent; /* **تعديل** */
+            padding: 5px 10px;
             border-radius: 4px;
             transition: transform 0.3s;
-            /* تم تغيير لون الإطار للأبيض */
-            border: 2px solid #ffffff; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 35px;
-            height: 35px;
+            border: none; /* **تعديل** */
+            line-height: 1;
         }
-        .menu-toggle:hover { 
-            transform: scale(1.1); 
-            background-color: rgba(255,255,255,0.1); /* تأثير خفيف عند التحويم */
-        }
+        .menu-toggle:hover { transform: scale(1.1); }
 
         /* 7. الهيدر والمحتوى */
         .content { padding: 20px; transition: opacity 0.3s ease; }
@@ -274,19 +198,19 @@
             text-align: center;
             padding: 30px 10px;
             position: relative;
-            padding-top: 30px;
-            border-radius: 0 0 15px 15px;
+            /* **تم إزالة padding-top: 50px;** */
         }
         .header h1 { font-size: 2rem; font-weight: 700; margin: 0; }
         .header p { font-size: 1.2rem; margin-top: 10px; }
 
+        /* تنسيق الشعار في الهيدر */
         .header-logo {
-            max-width: 250px;
+            max-width: 250px; /* حجم معقول للشعار في الهيدر */
             height: auto;
             margin-bottom: 20px;
         }
 
-        /* 8. الأزرار */
+        /* 8. زر اطلب الآن */
         .order-now {
             background-color: #ffd700;
             padding: 12px 24px;
@@ -303,6 +227,7 @@
         }
         .order-now:hover { background-color: #e6c200; transform: scale(1.05); }
 
+        /* 9. تنسيق الأزرار الصغيرة الجديدة (للأحياء تحديداً) */
         .mini-order-now {
             background-color: #ffd700;
             padding: 12px 24px;
@@ -332,7 +257,7 @@
             color: white;
         }
 
-        /* 10. الصور والأيقونات */
+        /* 10. صور الهيرو والأيقونات */
         .hero { text-align: center; padding: 20px 0; }
         .hero img {
             max-width: 600px;
@@ -353,7 +278,8 @@
             max-width: 90%;
         }
         #services .water-quality-image { width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
-        
+       
+        /* تنسيق صور الوايت */
         .truck-image {
             width: 100%;
             max-width: 500px;
@@ -362,23 +288,25 @@
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        
+       
+        /* تنسيق صورة الشعار الصغير الجديدة للاستبدال بالرمز 📍 */
         .mini-logo-icon {
-            max-width: 80px;
+            width: 80px; /* حجم صغير جداً ليحل محل الأيقونة */
             height: auto;
             vertical-align: middle;
-            margin-left: 5px;
+            margin-left: 5px; /* مسافة بسيطة */
         }
-        
+       
+        /* **تنسيق شعار قسم من نحن** */
         .about-logo {
-            max-width: 250px;
+            max-width: 250px; /* حجم معقول للشعار */
             height: auto;
-            display: block;
-            margin: 0 auto 20px auto;
-            border-radius: 5px;
+            display: block; /* لعرضه ككتلة */
+            margin: 0 auto 20px auto; /* توسيط الشعار وإضافة مسافة سفلية */
+            border-radius: 5px; /* حواف بسيطة */
         }
 
-        /* 11. الأقسام */
+        /* 11. الأقسام والحركة */
         .section {
             margin: 20px auto;
             padding: 25px;
@@ -392,12 +320,7 @@
             text-align: right;
         }
         .section.visible { opacity: 1; transform: translateY(0); }
-        
-        #six-ton-promo, #eighteen-ton-promo {
-             border: 2px solid #0056b3;
-             text-align: center;
-        }
-        
+
         /* 12. الفوتر */
         .footer {
             background: linear-gradient(90deg, #0056b3, #003a85);
@@ -409,8 +332,9 @@
         .footer h3 { margin: 0 0 10px 0; font-size: 1.5em; }
         .footer a { color: #ffd700; text-decoration: none; font-weight: bold; }
         .footer a:hover { text-decoration: underline; }
+        /* تنسيق الشعار في الفوتر */
         .footer-logo {
-            max-width: 180px;
+            max-width: 180px; /* حجم معقول للشعار في الفوتر */
             height: auto;
             margin-bottom: 15px;
         }
@@ -450,6 +374,7 @@
             border-left: 5px solid #ffd700;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             line-height: 1.6;
+            text-align: right;
         }
         .testimonial-card .quote {
             font-style: italic;
@@ -466,7 +391,7 @@
             border-top: 1px dashed #ddd;
         }
 
-        /* 15. القوائم */
+        /* 15. تنسيق قوائم الوايتات والأحياء */
         #areas ul, #six-ton-promo ul, #eighteen-ton-promo ul {
             display: flex;
             flex-wrap: wrap;
@@ -479,36 +404,53 @@
             margin-left: auto;
             text-align: right;
         }
-        
+       
         #areas ul li {
+            flex-basis: 40%;
             font-weight: bold;
             color: #003a85;
             line-height: 1.8;
             font-size: 1.15rem;
-            padding: 10px 0;
-            transition: color 0.3s;
-        }
-
-        #six-ton-promo ul, #eighteen-ton-promo ul {
-            max-width: 90%; 
-            text-align: right;
-        }
-        #six-ton-promo ul li, #eighteen-ton-promo ul li {
-            flex-basis: 100%;
+            padding: 10px 15px;
             background-color: #e6f0ff;
             border-radius: 5px;
-            padding: 10px 15px;
-            margin-bottom: 10px;
+            transition: background-color 0.3s, transform 0.2s;
         }
-        
+        #areas ul li:hover {
+            background-color: #d1e3ff;
+            transform: scale(1.02);
+        }
+        #six-ton-promo ul li, #eighteen-ton-promo ul li {
+            flex-basis: 40%;
+            font-weight: bold;
+            color: #0056b3;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            position: relative;
+        }
+       
+        #six-ton-promo ul li::before, #eighteen-ton-promo ul li::before {
+            content: "💧";
+            color: #0056b3;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+       
+        /* 16. تنسيق قوائم الخدمات والمميزات */
         #services ul {
             list-style-type: square;
             list-style-position: inside;
             padding-right: 20px;
+            text-align: right;
         }
         #features ul {
             list-style: none;
             padding-right: 0;
+            text-align: right;
         }
         #features ul li {
             padding: 10px 15px;
@@ -525,7 +467,7 @@
             transform: scale(1.02);
         }
 
-        /* 17. النصوص */
+        /* 17. تنسيق النصوص المميزة (highlight-text) */
         .highlight-text {
             font-size: 1.25rem;
             font-weight: 800;
@@ -539,35 +481,19 @@
         .highlight-text:hover {
             background-color: #b3d4ff;
         }
-        
-        .section p {
-            font-size: 18px;
-            color: #444;
-            margin-bottom: 15px;
-            text-align: right;
-        }
-        #areas p.center-text {
-             text-align: center !important;
-             font-weight: bold !important; 
-             font-size: 1.2rem !important;
-        }
 
-        #six-ton-promo p:not(.contact-buttons-container p),
-        #eighteen-ton-promo p:not(.contact-buttons-container p) {
+        /* 18. تنسيق نصوص الوايت 6 و 18 طن */
+        #six-ton-promo p:not(.contact-buttons-container p, .truck-image + p),
+        #eighteen-ton-promo p:not(.contact-buttons-container p, .truck-image + p) {
             text-align: center;
             font-size: 1.05rem;
             color: #555;
             margin-bottom: 15px;
         }
-        
-        .water-title-bold {
-            font-size: 1.1rem; 
-            color: #0056b3; 
-            font-weight: bold;
-        }
 
         /* 19. استجابة للشاشات الصغيرة */
         @media (max-width: 600px) {
+            body { padding-top: 60px; } /* **تعديل: ضمان المسافة العلوية على الجوال** */
             .sidebar { width: 200px; right: -200px; }
             .hero img { max-width: 95%; }
             .section { padding: 20px; max-width: 95%; }
@@ -580,6 +506,10 @@
                 font-size: 1rem; 
                 padding: 8px 12px; 
             }
+            #six-ton-promo ul li::before, #eighteen-ton-promo ul li::before {
+                font-size: 0.9rem;
+                margin-right: 6px;
+            }
             #features ul li { 
                 font-size: 1rem; 
                 padding: 8px 12px; 
@@ -588,47 +518,47 @@
                 font-size: 1.1rem; 
                 padding: 1px 3px; 
             }
+            /* تعديل الشعار في الهيدر للجوال */
             .header-logo {
                 max-width: 200px;
                 margin-bottom: 15px;
             }
             .mini-logo-icon {
-                max-width: 70px;
+                width: 80px; /* تصغير أكثر على الجوال */
             }
+            /* **تعديل شعار قسم من نحن للجوال** */
             .about-logo {
                 max-width: 180px;
                 margin-bottom: 15px;
             }
-            .sticky-navbar {
-                height: 65px;
+            .navbar-title {
+                font-size: 1rem; /* تصغير حجم النص في شريط التنقل */
             }
+        }
+        @media (min-width: 601px) {
+            .contact-buttons-container br.mobile-break { display: none; }
         }
     </style>
 </head>
 <body>
     
-    <nav class="sticky-navbar">
-        <div class="navbar-right">
-            <div class="menu-toggle" onclick="toggleSidebar()" role="button" aria-label="فتح وإغلاق القائمة" aria-expanded="false">☰</div>
-            <a href="#home" class="navbar-brand">مؤسسة البركة</a>
-        </div>
+    <div class="main-navbar">
+        <div class="menu-toggle" onclick="toggleSidebar()" role="button" aria-label="فتح وإغلاق القائمة" aria-expanded="false">☰</div>
+        <span class="navbar-title">مؤسسة البركة لتوريد المياه</span>
+        <img src="./logo.webp" alt="شعار مؤسسة البركة" class="navbar-logo" loading="lazy">
+    </div>
 
-        <div class="navbar-links">
-            <a href="#services">خدماتنا</a>
-            <a href="#contact">التواصل</a>
-        </div>
-    </nav>
     <div class="content" id="content">
-        
+       
         <div class="header" id="home">
             <img src="./logo.webp" alt="شعار مؤسسة البركة لتوريد المياه - Baraka Water Delivery Co." class="header-logo" loading="eager">
             <h1>وايت مياه الرياض صالحة للشرب 24 ساعة</h1>
             <p>مؤسسة البركة – توصيل سريع لكافة أحجام الوايتات (6 و 18 طن)</p>
-            
+           
             <a href="tel:+966547708489" class="order-now">📞 اطلب الآن 6 طن</a>
             <a href="tel:+966560898767" class="order-now">📞 اطلب الآن 18 طن</a>
         </div>
-        
+       
         <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <span class="close-sidebar" onclick="toggleSidebar()" role="button" aria-label="إغلاق القائمة">X</span>
@@ -658,27 +588,27 @@
         <div class="section" id="about">
             <h2>من نحن</h2>
             <img src="./logo_3.webp" alt="شعار مؤسسة البركة لتوريد المياه - Baraka Water Delivery Co." class="about-logo" loading="lazy">
-            
+           
             <p>مؤسسة البركة لتوريد المياه هي مؤسسة وطنية متخصصة في توفير وايت مياه نقية وصالحة للشرب داخل الرياض. نلتزم بتقديم خدمة عالية الجودة بأسعار منافسة وتوصيل سريع يشمل جميع الأحياء على مدار الساعة. هدفنا أن نوفر لعملائنا مياه آمنة ونقية في أي وقت من اليوم باستخدام شاحنات معقمة وأجهزة حديثة لضمان سلامة المياه. نحن وايت مياه 24 ساعة جاهز لخدمة خزاناتكم.</p>
-            
+           
             <div class="contact-buttons-container">
-                <a href="https://wa.me/966547708489" target="_blank" class="order-now whatsapp-btn">💬 واتساب 6 طن</a>
-                <a href="https://wa.me/966560898767" target="_blank" class="order-now whatsapp-btn">💬 واتساب 18 طن</a>
+                <a href="https://wa.me/966547708489" target="_blank" class="order-now" style="background-color:#25d366;color:white;">💬 واتساب 6 طن</a>
+                <a href="https://wa.me/966560898767" target="_blank" class="order-now" style="background-color:#25d366;color:white;">💬 واتساب 18 طن</a>
             </div>
         </div>
 
-        <div class="section" id="six-ton-promo">
+        <div class="section" id="six-ton-promo" style="text-align: center; border: 2px solid #0056b3;">
             <h2>🚚 وايت المياه الصغير (6 طن)</h2>
             <img src="./truk-6_TN.webp.jpg" alt="وايت مياه صغير 6 طن صهريج مياه صالحة للشرب في الرياض" class="truck-image">
-            <p class="water-title-bold">
+            <p style="font-size: 1.1rem; color: #0056b3; font-weight: bold;">
                 <span style="color: #003a85;">الخيار المثالي للمنازل ذات الخزانات الصغيرة أو التي يصعب الوصول إليها!</span>
             </p>
             <p>
-                لماذا تختار وايت 6 طن؟
+                لماذا تختار وايت 6 طن?
                 <br>
                 إذا كنت تحتاج إلى كمية متوسطة من المياه، أو كان حيّك ضيقاً، يوفر لك وايت 6 طن الحل السريع والموثوق:
             </p>
-            <ul>
+            <ul style="text-align: right;">
                 <li>مناسب للخزانات المتوسطة والصغيرة في الفلل والمنازل.</li>
                 <li>سرعة فائقة في التوصيل وقدرة عالية على المناورة في الشوارع الضيقة.</li>
                 <li>مياه شرب نقية ومضمونة الجودة، مع فحص دوري لنقاء المياه.</li>
@@ -686,14 +616,14 @@
 
             <div class="contact-buttons-container">
                 <a href="tel:+966547708489" class="order-now">📞 اطلب 6 طن الآن</a>
-                <a href="https://wa.me/966547708489" target="_blank" class="order-now whatsapp-btn">💬 واتساب 6 طن</a>
+                <a href="https://wa.me/966547708489" target="_blank" class="order-now" style="background-color:#25d366;color:white;">💬 واتساب 6 طن</a>
             </div>
         </div>
 
-        <div class="section" id="eighteen-ton-promo">
+        <div class="section" id="eighteen-ton-promo" style="text-align: center; border: 2px solid #0056b3;">
             <h2>🚛 وايت المياه الكبير (18 طن)</h2>
             <img src="./truck.webp" alt="وايت مياه كبير 18 طن صهريج مياه صالحة للشرب في الرياض" class="truck-image">
-            <p class="water-title-bold">
+            <p style="font-size: 1.1rem; color: #0056b3; font-weight: bold;">
                 <span style="color: #003a85;">الحل الأمثل للخزانات الكبيرة، المشاريع، والمطاعم التي تحتاج كميات ضخمة!</span>
             </p>
             <p>
@@ -701,7 +631,7 @@
                 <br>
                 للاحتياجات الكبيرة من المياه وضمان عدم انقطاع الإمداد، يوفر لك وايت 18 طن:
             </p>
-            <ul>
+            <ul style="text-align: right;">
                 <li>مناسب للمنازل الكبيرة والفلل والمباني ذات الاستهلاك العالي.</li>
                 <li>يخدم المشاريع الإنشائية والمواقع التجارية والمطاعم والفنادق.</li>
                 <li>مياه شرب نقية بكميات وفيرة لتغطية أي طلب بكفاءة عالية.</li>
@@ -709,28 +639,28 @@
 
             <div class="contact-buttons-container">
                 <a href="tel:+966560898767" class="order-now">📞 اطلب 18 طن الآن</a>
-                <a href="https://wa.me/966560898767" target="_blank" class="order-now whatsapp-btn">💬 واتساب 18 طن</a>
+                <a href="https://wa.me/966560898767" target="_blank" class="order-now" style="background-color:#25d366;color:white;">💬 واتساب 18 طن</a>
             </div>
         </div>
-        
+       
         <div class="section" id="services">
             <h2>خدماتنا (مياه نقية مضمونة)</h2>
             <img src="./3.webp" alt="صورة توضيحية لنقاء المياه وشفافيتها" class="water-quality-image">
-            <p class="water-title-bold" style="text-align: center;">نضمن لك أعلى معايير الجودة والنقاء لمياه الشرب!</p>
+            <p style="text-align: center; font-weight: bold; color: #0056b3;">نضمن لك أعلى معايير الجودة والنقاء لمياه الشرب!</p>
             <p>نقدم خدمة توصيل وايت مياه الشرب عالية النقاء باستخدام أسطول من الوايتات المعقمة:</p>
-            <ul>
-                <li>توفير وايت مياه صالحة للشرب بأحجام مختلفة (<span class="water-title-bold" style="font-size: 1em;">6 طن، 18 طن </span>)</li>
+            <ul style="text-align: right;">
+                <li>توفير وايت مياه صالحة للشرب بأحجام مختلفة (<span style="font-weight: bold; color: #0056b3;">6 طن، 18 طن </span>)</li>
                 <li>توصيل فوري لجميع أحياء الرياض خلال 24 ساعة</li>
                 <li>خدمة توريد المياه للمنازل، الفلل، المشاريع الإنشائية، والمسابح</li>
-                <li><span class="water-title-bold" style="font-size: 1em;">التوصيل إلى المطاعم والمقاهي والفنادق</span></li>
+                <li><span style="font-weight: bold; color: #0056b3;">التوصيل إلى المطاعم والمقاهي والفنادق</span></li>
                 <li>أسعار منافسة وخصومات خاصة للعقود الشهرية</li>
             </ul>
         </div>
-        
-        <div class="section" id="features">
+       
+        <div class="section" id="features" style="text-align: center;">
             <img src="./1.webp" alt="أيقونة شارة التميز والخدمة الموثوقة" class="feature-icon">
             <h2>لماذا نحن خيارك الأفضل؟</h2>
-            <ul>
+            <ul style="text-align: right;">
                 <li><span class="highlight-text">الجودة والالتزام</span>: مياه نقية صالحة للشرب، مطابقة للمواصفات السعودية. 🏆</li>
                 <li><span class="highlight-text">خدمة 24 ساعة</span>: نحن متاحون على مدار الساعة لخدمة طوارئ المياه. 🕒</li>
                 <li><span class="highlight-text">سرعة التوصيل</span>: أسرع توصيل وايت مياه في الرياض. 🚀</li>
@@ -738,32 +668,24 @@
                 <li><span class="highlight-text">سجل تجاري موثق</span>: مؤسسة رسمية (رقم السجل: 1010590128). 🛡️</li>
             </ul>
         </div>
-        
+       
         <div class="section" id="areas">
             <h2><img src="./logo_2.webp" alt="رمز البركة للتغطية" class="mini-logo-icon"> نطاق التغطية الشامل (أحياء الرياض)</h2>
-            <p class="center-text">
+            <p style="font-size: 1.2rem; font-weight: bold; color: #333; text-align: center;">
                 خدمة وايت المياه تصل إليك أينما كنت في الرياض على مدار الساعة.
             </p>
-            <ul>
+            <ul style="list-style: none; padding-right: 0; text-align: right;">
                 <li><span class="highlight-text">الرياض بالكامل</span>: توصيل فوري لجميع المناطق.</li>
-                <li>
-                    <span class="highlight-text">أحياء الشمال والوسط</span>: 
-                    تغطية سريعة لأحياء (
-                    الصحافة، الملقا، العارض، النرجس، الياسمين، القيروان، العليا، المحمدية، السلمانية، أم الحمام، الروابي، الربوة... إلخ
-                    )
-                </li>
-                <li>
-                    <span class="highlight-text">أحياء الجنوب والغرب</span>: 
-                    خدمة متميزة لأحياء (
-                    السويدي، الشفا، العزيزية، الدار البيضاء، طويق، لبن، المهدية، عرقـة... إلخ
-                    )
-                </li>
+                <li><span class="highlight-text">شمال الرياض</span>: تغطية سريعة لأحياء (النرجس، الياسمين، الملقا،... إلخ)</li>
+                <li><span class="highlight-text">جنوب الرياض</span>: خدمة متميزة لأحياء (عكاظ، الشفا، الدار البيضاء،... إلخ)</li>
+                <li><span class="highlight-text">وسط الرياض</span>: تلبية طلبات الطوارئ للمنازل والمشاريع.</li>
                 <li><span class="highlight-text">شرق الرياض</span>: سرعة قياسية في التوصيل لجميع الأحياء.</li>
+                <li><span class="highlight-text">غرب الرياض</span>: إمداد منتظم ومضمون بالكميات المطلوبة.</li>
             </ul>
             <p style="font-size: 1.1rem; color: #555; text-align: center;">للتأكد من تغطية حيكم بالتفصيل، يرجى التواصل معنا مباشرة.</p>
-            
+           
             <div class="contact-buttons-container">
-                <h3>اطلب وايت المياه الآن لنصلك فوراً!</h3>
+                <h3 style="color:#0056b3;">اطلب وايت المياه الآن لنصلك فوراً!</h3>
                 <div class="call-group">
                     <a href="tel:+966547708489" class="mini-order-now">📞 اتصال 6 طن</a>
                     <a href="tel:+966560898767" class="mini-order-now">📞 اتصال 18 طن</a>
@@ -775,11 +697,11 @@
             </div>
         </div>
 
-        <div class="section" id="prices">
+        <div class="section" id="prices" style="text-align: center;">
             <img src="./2.webp" alt="أيقونة سعر تنافسي وخصومات" class="price-icon">
             <h2>الأسعار والاشتراكات</h2>
-            <p style="font-size: 1.1rem; color: #333; text-align: center;">نحرص على تقديم أفضل الأسعار التنافسية في جميع أحياء الرياض لضمان حصولك على مياه نقية بأقل تكلفة.</p>
-            <ul>
+            <p style="font-size: 1.1rem; color: #333;">نحرص على تقديم أفضل الأسعار التنافسية في جميع أحياء الرياض لضمان حصولك على مياه نقية بأقل تكلفة.</p>
+            <ul style="list-style: none; padding-right: 0; text-align: right;">
                 <li>💰 أسعار مميزة لجميع أحجام الوايتات (6، 18،طن).</li>
                 <li>💳 خصومات خاصة على الاشتراك الشهري لتوريد المياه بانتظام للمطاعم والشركات والمنازل.</li>
                 <li>💵 لا توجد رسوم خفية – السعر يشمل التوصيل إلى خزانك مباشرة.</li>
@@ -842,7 +764,7 @@
             const menuToggle = document.querySelector('.menu-toggle');
 
             sidebar.classList.toggle('active');
-            
+           
             const isExpanded = sidebar.classList.contains('active');
             menuToggle.setAttribute('aria-expanded', isExpanded);
         }
@@ -860,7 +782,7 @@
             function checkVisibility() {
                 const sections = document.querySelectorAll('.section');
                 const windowHeight = window.innerHeight;
-                
+               
                 sections.forEach(section => {
                     const sectionTop = section.getBoundingClientRect().top;
                     if (sectionTop < windowHeight - 100) {
